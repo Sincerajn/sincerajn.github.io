@@ -1,0 +1,50 @@
+.about {
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.about p {
+    background: #fff;
+    line-height: 32px;
+    padding: 16px;
+    border-radius: 8px;
+    margin-right: 32px;
+}
+
+.about .more {
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 16px;
+    /* justify-content: center; */
+}
+
+.more li {
+    list-style: none;
+    padding: 16px;
+    width: 32px;
+    height: 32px;
+}
+
+.more li img {
+    width: 32px;
+    height: 32px;
+}
+
+.article-list {
+    padding: 0;
+    margin: 16px 0;
+}
+
+.article-list li {
+    list-style: none;
+}
+
+.band {
+    width: 1024px;
+    margin-top: 32px;
+}
