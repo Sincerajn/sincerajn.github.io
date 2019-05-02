@@ -1,3 +1,3 @@
 # Sincerajn.github.io
 
-My blog
+My blog, run in github page.
