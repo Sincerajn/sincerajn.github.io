@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Hello, world.
-category: blog
+tag: blog
 description: 向世界问好，宣告博客的第一声。
 ---
 
