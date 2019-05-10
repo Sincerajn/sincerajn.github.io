@@ -30,6 +30,7 @@ description: Sincerajn 的个人博客主页
             <li>
                 <a href="{{ post.url }}">{{ post.title }}</a>
                 {{ post.date | date_to_string }}
+                {{ page.date | date_to_xmlschema }}
             </li>
 
             {% endfor %}
