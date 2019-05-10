@@ -1,10 +1,12 @@
 ---
 layout: default
-title: 你好，世界
+title: Hello, world.
+category: blog
+description: 向世界问好，宣告博客的第一声。
 ---
 
-<h2>{{ page.title }}</h2>
+## {{ page.title }}
 
-<p>我的第一篇文章</p>
+我的第一篇文章
 
-<p>{{ page.date | date_to_string }}</p>
+{{ page.date | date_to_string }}
