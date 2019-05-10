@@ -9,7 +9,8 @@
     <meta name="generator" content="Jekyll">
     <meta name="renderer" content="webkit">
     <meta name="description" content="{{ page.description }}">
-    <meta name="keywords" content="sincerajn {{ page.title }} {{ page.tag }} 博客 linux python html css javascript github Jekyll 教程 日志 besiege rimwrold ">
+    <meta name="keywords"
+        content="sincerajn {{ page.title }} {{ page.tag }} 博客 linux python html css javascript github Jekyll 教程 日志 besiege rimwrold ">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/modern-normalize/0.5.0/modern-normalize.min.css">
     <link rel="stylesheet" href="../css/base.css">
@@ -17,9 +18,27 @@
 </head>
 
 <body>
+    <header>
+        <h1 class="title">{{ page.title }}</h1>
+    </header>
 
-{{ content }}
+    {{ content }}
 
+    <div class="about">
+        <p>本站托管于 Github，依托 Github 与 Jekyll，啦啦啦</p>
+        <ul class="more">
+            <li><a href="https://github.com/Sincerajn/Sincerajn.github.io"><svg
+                        class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+                        width="32" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+                        </path>
+                    </svg></a></li>
+            <li><a href="https://www.zhihu.com/people/li-zhen-35-82/activities"><img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF4AAABeCAMAAACdDFNcAAAAclBMVEUPiOv///8AguoAhOvD3vkAhusAgOrz+f622PgAiuwdjOwNjuz5+/wAfuqIvvOp0Pfu8/lXousulO2cxe/U5/uuz/GNvO+20/Lb6fbD3PN8tO6Dt+7U5fVMnuo3leqkyfCVxPTn8f1sr/FDnO5fqe8AeemmLB9zAAAEzElEQVRogeWaa3uCOgyAaWOLCE5AFHEiMnf+/188vXBvwBbnh/OcfNim4ts0TdMknUc+Kt7/BR8JiWP586/xflF9J2nA+H7PWRCW38dNbDXIa3xUnEvGKTCPeUoYY0ApPM+F/y4+un2HnDbcsTDg4TV7MYdFfHR6csDQ/Qj3anEKC3i/SnG9RyPw9LgwwDw+D/lLuBIanpzxl4RasZXw8uaGPzI7zVsTwcMBH/9a2qXn8yS2xRfhkrvMCISFHT53M0w3AYassImvVqiu+VC9xh9f+/osnxoLPMVX6+mSP9V/gs/hDbq0T76EL96CSz4r5vFx+C7eY2E8i/9d6zQDgWQOf+SINuA65Mh9BvgLsp0gOB9c4wNcUHyC0K+EHBxCp+YnGD43MfCDj/pCaG7i/dBUwxNeUK+IQKFv4CtzXdkvwWzDTJk8waspPkpNJdUkEw4DEQ+xnSmT77I0muBPpuWZJ+YYPb6GIkCw9adCps7LT2N89DSVV7aZyJZ6sDHfnurGntEIf0N2FMbx91Z4j99G+G9zb7Kd1EDNvfkthSt8tOmlxvDwPcRHplfqJzZhmoZyF5apkruelE85beSfLYb3wmiALxDbUElNQCQBl5FjKXzQvaQ4nhcD/BnxG7m1M/k+KHw/Kys8PQ/wpek3PBOUu3yfCbzvimdlj/eRhX0Kd3rK95lXj0KGHd4Dv8Mjpofz6VfXCyyoR+eYJV4bX+Er5GNGm1DCdgJf71zx9NjhEa8fjLMOrz1f4RdDujqcL4ErXh8qEj/wOkxSsUi3gVp2eE9FTYUPUO1Bb0su8Vm7S+21Dzo8RmfscdAiv183f59SZqs96/BISNBfM2VLbfG8xcd7ZOwQpZMLt8Xv4wU8nHF8tHfGY8Zhu7CR4CAe+Qnal9a25y+WthEuT6cEuqTAfWlxx2zNJM+1e/+Eu2Mu5t1y0w5igjU+bPFYuO8fS1RITZyDQmkV0lS9/cjJtUW4h7TjQhLMpOnl0dDWFu4BOce2bUN/ypAgEW2mZXuc5B0+njcOlV6/3cujpzmxbI0Td3gsBWyUV2H1B+SRQjJ1Og7xclvMHOU6DWwSkTn1VR0c7xh7+iqedXg90rz2MExEsDRK6yA/lSk+lYWKmEaTetZZwCA81UJ8FD9Ko3x8YzHIOtOpgm9Du8y25Ne+gjVLjKZAaVLYK2odXUM2qb+0Qtbjq2GibKawVzLEZ5h1QCX4ftou40XjqyxrW2e3TMnFUE7meAN8dDetA3rxv1rVRBSRxhHjgJ56/TNTW3nsPi4fkMoNlLOQotcMkqN+odfksJttn3S1W4v3p8kI1fR6uOgsaAf6IrdyIZJ0lWdXeE7ijqqYRbiYFn3NOM/HUrmr480IPymbg1NR5NfdbLRYbCshZTM5ja0vili6sjXF+5bgoGWxdKi4SFM5TPG39/poncANxZPHfNh3kLl2kaoD3xYoyRz+w606UqxrHw/osNBoFN75bpt00qb+2yYvHMkynjzeaFGbaTXWYF/JN3X/0+uBqd1n8B++3BD+nzgvALW/mhHycFsAt4sl8ulrMfLhSz2iriRfD8B4uO5Kknz4QlUN8MnrYD1CcS7BvMymf3GZ3YhfHLureFBX8Tnq5ivxSj73jwSr5b+N/xeUH0WvvKnCQAAAAABJRU5ErkJggg=="
+                        alt=""></li></a>
+        </ul>
+    </div>
 </body>
 
 </html>
