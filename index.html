@@ -14,6 +14,16 @@ description: Sincerajn 的个人博客主页
 
 <main class="card">
     <article>
+        <ul>
+            {% tag in site.tags %}
+            <li>
+                {{ tag }}
+            </li>
+            {% endfor %}
+        </ul>
+    </article>
+
+    <article>
         <ul class="article-list">
             {% for post in site.posts %}
 
