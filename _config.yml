@@ -1,1 +1,4 @@
 baseurl: /
+timezone: Asia/Shanghai
+encoding : utf-8
+
