@@ -7,12 +7,12 @@ description: Sincerajn 的个人博客主页
 
 <main class="row">
     <div class="col-md-8">
-        <ul>
+        <ul style="padding: 0">
             {% for post in site.posts %}
-            <li>
-                <h2>post.title</h2>
+            <li style="list-style: none">
+                <h2>{{ post.title }}</h2>
                 <p>
-                    post.description
+                    {{ post.description }}
                 </p>
                 <p>
                     <a class="btn text-info" href="{{ site.baseurl }}{{ post.url }}">View details »</a>
