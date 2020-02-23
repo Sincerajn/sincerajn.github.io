@@ -78,18 +78,11 @@
 
 .gt-ico-text {
     color: #795548aa !important;
-}
-
-span.gt-ico {
-    margin-left: -1em;
-}
-
-.gt-ico-text {
     margin-left: 0!important;
 }
 
-span.gt-ico svg {
-    visibility: hidden;
+.gt-ico-tip > span:nth-child(1) {
+    display: none;
 }
 
 .gt-btn {
@@ -138,6 +131,21 @@ span.gt-ico svg {
 .gt-comment-username {
     font-family: "Noto Serif SC", Georgia, serif !important;
     color: #795548 !important;
+}
+
+/* 点赞与修改按钮 */
+.gt-comment-like svg {
+    fill: #f44336 !important;
+}
+
+.gt-comment-edit svg {
+    fill: #333 !important;
+}
+
+.gt-comment-like .gt-ico-text {
+    position: relative;
+    top: .1em;
+    left: .25em;
 }
 
 /* 发表时间 */
