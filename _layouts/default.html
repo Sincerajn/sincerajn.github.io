@@ -28,6 +28,22 @@
             <p>{{ page.date | date_to_xmlschema }}</p>
             <p>{{ page.url }}</p>
         </lit-doc>
+
+        <div class="comment" id="container"></div>
+        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+        <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+        <script>
+            var gitment = new Gitment({
+                // id: '页面 ID', // 可选。默认为 location.href
+                owner: 'Sincerajn',
+                repo: 'Sincerajn/comment',
+                oauth: {
+                    client_id: 'a08545b7f6f0fbf705be',
+                    client_secret: 'e682fe10b8b56b966e802e042e551007bf0b85a3',
+                },
+            })
+            gitment.render('container')
+        </script>
     </main>
 </body>
 
