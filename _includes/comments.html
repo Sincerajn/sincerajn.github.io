@@ -1,0 +1,13 @@
+<script>
+    var gitalk = new Gitalk({
+        clientID: '66235ca967067f7b1039',
+        clientSecret: 'c8433732d5d3886bef959ed14397388b4aa25629',
+        repo: 'Sincerajn.github.io',
+        owner: 'Sincerajn',
+        admin: ['Sincerajn'],
+        id: decodeURI('{{ page.url }}'),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+</script>
