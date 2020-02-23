@@ -1,0 +1,151 @@
+/* 定制 Gittalk 样式 */
+
+#gitalk-container {
+    font-size: inherit;
+    font-family: inherit;
+    max-width: 40em;
+    margin: 1rem auto 8rem 6rem;
+}
+
+/* 计数 */
+
+.gt-link {
+    color: #333333 !important;
+    font-weight: bold;
+    border: 0 !important;
+}
+
+/* 发表区 */
+
+.gt-header-comment {
+    margin-left: 1.5rem !important;
+}
+
+.gt-meta {
+    margin: 1rem 0 !important;
+    ;
+    border-bottom: 0 !important;
+}
+
+.gt-counts::before {
+    content: "当前 ";
+}
+
+/* 用户头像 */
+
+.gt-avatar>img {
+    border-radius: 50% !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.gt-user-name {
+    font-size: 1rem !important;
+    font-family: "Noto Serif SC", Georgia, serif;
+}
+
+.gt-popup {
+    margin-top: 1em;
+}
+
+/* 评论输入框 */
+
+.gt-header-textarea {
+    font-size: 1rem !important;
+    font-family: "Noto Serif SC", Georgia, serif;
+    background: #f6f6f6 !important;
+    padding: 1em !important;
+    border-radius: 0 !important;
+    border: 0 !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+    transition: .3s !important;
+}
+
+.gt-header-textarea:hover {
+    background: #fff !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
+}
+
+.gt-header-textarea:focus {
+    background: #fff !important;
+    outline: 2px solid #795548;
+}
+
+/* 操作栏 */
+
+.gt-header-controls {
+    margin-top: 1rem !important;
+}
+
+.gt-ico-text {
+    color: #795548aa !important;
+}
+
+span.gt-ico {
+    margin-left: -1em;
+}
+
+.gt-ico-text {
+    margin-left: 0!important;
+}
+
+span.gt-ico svg {
+    visibility: hidden;
+}
+
+.gt-btn {
+    font-size: 1rem !important;
+    font-family: "Noto Serif SC", Georgia, serif;
+    padding: .6em 1em !important;
+    border: 0 !important;
+    ;
+    border-radius: 2px !important;
+    color: #333333 !important;
+    background: #fff !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: .3s;
+}
+
+.gt-btn:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.gt-btn-public {
+    color: #795548 !important;
+    ;
+}
+
+/* 评论区 */
+
+.gt-comment {
+    padding: 1rem 0 !important;
+}
+
+.gt-comment-content {
+    margin-left: 1。5rem !important;
+    padding: 1.2rem !important;
+    background-color: #f6f6f6 !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.gt-comment-content:hover {
+    box-shadow: none !important;
+}
+
+.gt-comment-header {
+    margin-bottom: .5rem !important;
+}
+
+.gt-comment-username {
+    font-family: "Noto Serif SC", Georgia, serif !important;
+    color: #795548 !important;
+}
+
+/* 发表时间 */
+
+.gt-comment-date {
+    margin-left: 0 !important;
+}
+
+.gt-comment-body {
+    font-family: "Noto Serif SC", Georgia, serif !important;
+}
