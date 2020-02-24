@@ -1,0 +1,50 @@
+lit-header {
+    padding: 1.25rem 1.25rem 1.25rem calc((100vw - 40em) / 2);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+    margin-bottom: 4rem
+}
+
+lit-header lit-title {
+    margin-left: 0;
+}
+
+lit-doc {
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+pre.highlight {
+    padding: 1.5em 2em;
+    background: #f2f2f2;
+}
+
+pre.highlight code {
+    font-size: 14px;
+    font-family: monospace;
+    line-height: 1.5em;
+}
+
+/* 关键字 */
+
+code .kd, code .k {
+    color: #1010cf;
+}
+
+/* 函数/变量名 */
+
+code .nx {
+    color: #795e26;
+}
+
+/* 注释 */
+
+code .c1 {
+    color: #528000;
+}
+
+/* 数字 */
+
+code .mi {
+    color: #098658;
+}
