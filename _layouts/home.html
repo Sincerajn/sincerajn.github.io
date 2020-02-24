@@ -20,10 +20,13 @@
     <lit-header>
         <lit-left>
             <lit-title>{{site.blogName}}</lit-title>
+            <h1 style="visibility: hidden;">{{ page.title }}</h1>
         </lit-left>
     </lit-header>
 
-    {{ content }}
+    <main>
+        {{ content }}
+    </main>
 </body>
 
 </html>

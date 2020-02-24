@@ -27,6 +27,7 @@
 
     <main>
         <lit-doc>
+            <h1>{{ page.title }}</h1>
             {{ content }}
             <p>{{ page.date | date_to_xmlschema }}</p>
             <p>{{ page.url }}</p>
@@ -41,7 +42,7 @@
                 repo: 'Sincerajn.github.io',
                 owner: 'Sincerajn',
                 admin: ['Sincerajn'],
-                id: '{{ page.date }}',      // Ensure uniqueness and length less than 50
+                id: '{{ page.date }}',
                 distractionFreeMode: false  // Facebook-like distraction free mode
             })
 
