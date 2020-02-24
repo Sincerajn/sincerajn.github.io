@@ -4,8 +4,7 @@
     font-size: inherit;
     font-family: inherit;
     max-width: 40em;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 8rem;
 }
 
 /* 计数 */
