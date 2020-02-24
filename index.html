@@ -8,15 +8,12 @@ description: Sincerajn 的个人博客主页
 <lit-articles-list class="-lit-typo">
     <ul style="padding-left: 0;">
         {% for post in site.posts %}
-        <li>
-            <h2 class="-lit-serif">
+        <li style="list-style: none;margin-bottom: 1rem;">
+            <h2 style="color: #333333;" class="-lit-serif">
                 <a href="{{ post.url }}">{{ post.title }}</a>
             </h2>
             <p>
                 {{ post.description }}
-            </p>
-            <p>
-                <a href="{{ site.baseurl }}{{ post.url }}">View page »</a>
             </p>
         </li>
         {% endfor %}
