@@ -21,7 +21,7 @@ function fun() {
 
  而函数体外部则无法读取其内部的局部变量
 
-```JavaScript
+```javascript
 function fun() {
     let n = 10
 }
