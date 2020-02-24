@@ -28,23 +28,23 @@ pre.highlight code {
 /* 关键字 */
 
 code .kd, code .k {
-    color: #1010cf;
+    color: #d19a66;
 }
 
-/* 函数/变量名 */
+/* 普通 */
 
 code .nx {
-    color: #795e26;
+    color: #333333;
 }
 
 /* 注释 */
 
 code .c1 {
-    color: #528000;
+    color: #98c379;
 }
 
 /* 数字 */
 
 code .mi {
-    color: #098658;
+    color: #61afef;
 }
