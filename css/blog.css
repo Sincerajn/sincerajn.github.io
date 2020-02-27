@@ -8,10 +8,8 @@ lit-header lit-title {
     margin-left: 0;
 }
 
-lit-doc {
-    max-width: 40em;
-    margin-left: auto;
-    margin-right: auto;
+lit-col.center {
+    margin: 0 auto;
 }
 
 pre.highlight {
