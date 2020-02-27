@@ -5,6 +5,8 @@ category: blog
 description: 博客内全部文章的标签聚合显示页
 ---
 
+<!-- tag[0] 标签名字，tag[1] 标签下文章集合 -->
+
 <ul>
     {% for tag in site.tags %}
     <li>
@@ -19,7 +21,7 @@ description: 博客内全部文章的标签聚合显示页
     {% for tag in site.tags %}
     <li id="{{ tag[0] }}">
         <p>
-            {tag[0]}
+            {{tag[0]}}
         </p>
     </li>
     {% for post in tag[1] %}
