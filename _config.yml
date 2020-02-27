@@ -1,5 +1,6 @@
 baseurl: /
 timezone: Asia/Shanghai
 encoding: utf-8
+markdown: kramdown
 
 blogName: Sincerajn's blog

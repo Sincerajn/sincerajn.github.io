@@ -1,0 +1,33 @@
+---
+layout: default
+title: 标签聚合
+category: blog
+description: 博客内全部文章的标签聚合显示页
+---
+
+<ul>
+    {% for tag in site.tags %}
+    <li>
+        <p>
+            <a href="#{{ tag[0] }}">{{ tag[0] }}</a>{{ tag[1].size }}
+        </p>
+    </li>
+    {% endfor %}
+</ul>
+
+<ul>
+    {% for tag in site.tags %}
+    <li id="{{ tag[0] }}">
+        <p>
+            {tag[0]}
+        </p>
+    </li>
+    {% for post in tag[1] %}
+    <li>
+        <p>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </p>
+    </li>
+    {% endfor %}
+    {% endfor %}
+</ul>
