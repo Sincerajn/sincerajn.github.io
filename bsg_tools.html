@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>动力利用率计算器</title>
+  <link rel="stylesheet" href="https://raw.githack.com/Sincerajn/litCore/master/css/litCore.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+  <!-- <link rel="stylesheet" href="css/index.css"> -->
+  <style>
+    body {
+      background: #efefef;
+    }
+
+    lit-title {
+      padding: 8px 0;
+    }
+
+    lit-doc {
+      background: #fff;
+      padding: 1rem 2rem;
+    }
+
+    lit-doc h2 {
+      margin-bottom: 0;
+    }
+
+    .input-div {
+      margin-top: .5em;
+    }
+
+    .theory-speed {
+      margin-bottom: 0;
+    }
+
+    #efficiency-results {
+      display: block;
+      margin-top: 8px;
+      font-size: 2rem;
+      color: #7b8b71;
+    }
+
+    #wheel-select {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: inherit;
+      border: 0;
+      margin-left: -4px;
+    }
+
+    #wheel-select:focus {
+      outline: none;
+    }
+  </style>
+</head>
+
+<body class="-lit">
+  <lit-header class="-shadow">
+    <lit-title>
+      动力利用率计算器
+    </lit-title>
+  </lit-header>
+
+  <main>
+    <lit-row>
+      <lit-doc id="wheel">
+        <select id="wheel-select" v-model="wheelSize">
+          <option value="big">大轮</option>
+          <option value="small">小轮</option>
+        </select>
+        <lit-row>
+          <lit-col>
+            <div class="input-div">
+              <label for="zoom">缩放倍率：</label><input class="-lit-input" type="text" id="zoom" v-model.number="zoom">
+            </div>
+            <div class="input-div">
+              <label for="spin_speed">轮子转速：</label><input class="-lit-input" type="text" id="spin_speed"
+                v-model.number="spinSpeed">
+            </div>
+            <div class="input-div">
+              <label for="actual_speed">实际极速：</label><input class="-lit-input" type="text" id="actual_speed"
+                v-model.number="actualSpeed">
+            </div>
+          </lit-col>
+          <lit-col>
+            <p class="theory-speed">理论极速：<span>{{ theorySpeed.toFixed(2) }}</span>km/h</p>
+            <p>动力利用率：<span id="efficiency-results">{{ efficiencyResults.toFixed(2) }}%</span></p>
+          </lit-col>
+        </lit-row>
+      </lit-doc>
+    </lit-row>
+  </main>
+  <script>
+    let Wheel = new Vue({
+      el: '#wheel',
+      data: {
+        wheelSize: 'big',
+        zoom: 1.1,
+        spinSpeed: 6,
+        actualSpeed: 307,
+      },
+      computed: {
+        perimeter: function () {
+          return (this.wheelSize == 'big') ? 3 : 2
+        },
+        rpm: function () {
+          return (this.wheelSize == 'big') ? 92.31 : 100
+        },
+        theorySpeed: function () {
+          let perimeter = this.zoom * this.perimeter * Math.PI
+          let RPS = this.spinSpeed * this.rpm / 60
+
+          return perimeter * RPS * 3.6
+        },
+        efficiencyResults: function () {
+          return 100 / this.theorySpeed * this.actualSpeed
+        },
+      }
+    })
+  </script>
+</body>
+
+</html>
