@@ -14,6 +14,23 @@
       background: #efefef;
     }
 
+    lit-header {
+      align-items: flex-end;
+    }
+
+    main > lit-row {
+      justify-content: center;
+    }
+
+    .lite-btns {
+      margin-right: 1rem;
+    }
+
+    .lite-btns img {
+      display: block;
+      width: 24px;
+    }
+
     lit-title {
       padding: 8px 0;
     }
@@ -63,6 +80,10 @@
       outline: none;
     }
 
+    #comment {
+      margin-top: 0;
+    }
+
     @media screen and (max-width: 720px) {
       lit-row {
         flex-wrap: wrap;
@@ -81,9 +102,14 @@
 
 <body class="-lit">
   <lit-header class="">
-    <lit-title>
-      动力利用率计算器<span class="version">Version: <span id="version-number">0.11</span></span>
-    </lit-title>
+    <lit-left>
+      <lit-title>
+        动力利用率计算器<span class="version">Version: <span id="version-number">0.12</span></span>
+      </lit-title>
+    </lit-left>
+    <lit-right class="lite-btns">
+      <a href="Mailto:sincerajn@outlook.com?&Subject=Besiege Tools 页面反馈&Body=请详细描写遇到的问题，最好附上截图"><img src="img/mail.svg" alt="发送反馈邮件" title="发送反馈邮件"></a>
+    </lit-right>
   </lit-header>
 
   <main>
@@ -110,6 +136,7 @@
           <lit-col>
             <p class="theory-speed">理论极速：<span>{{ theorySpeed.toFixed(2) }}</span>km/h</p>
             <p>动力利用率：<span id="efficiency-results">{{ efficiencyResults.toFixed(2) }}%</span></p>
+            <p id="comment">{{ commentText }}</p>
           </lit-col>
         </lit-row>
       </lit-doc>
@@ -140,8 +167,24 @@
         efficiencyResults: function () {
           return 100 / this.theorySpeed * this.actualSpeed
         },
+        commentText: function () {
+          if (this.efficiencyResults < 75) {
+            return '利用率有些太低了，试试多改进一下？'
+          }
+          else if (this.efficiencyResults < 82) {
+            return '利用率仍有改进空间，尝试优化一下？'
+          }
+          else {
+            return null
+          }
+        },
       }
     })
+
+    let isX5Browser = () => {
+      let url = navigator.userAgent.toLowerCase()
+      return url.includes('15b202')
+    }
   </script>
 </body>
 
