@@ -7,7 +7,7 @@
   <title>动力利用率计算器</title>
   <link rel="shortcut icon" href="./img/bsg_tools_favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/litCore.css">
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
   <!-- <link rel="stylesheet" href="css/index.css"> -->
   <style>
     body {
@@ -18,7 +18,7 @@
       align-items: flex-end;
     }
 
-    main > lit-row {
+    main>lit-row {
       justify-content: center;
     }
 
@@ -48,6 +48,11 @@
       margin: .5em 0;
     }
 
+    .show-div > p {
+      margin-top: 0;
+      margin-bottom: .5rem;
+    }
+
     .theory-speed {
       margin-bottom: 0;
     }
@@ -63,9 +68,8 @@
 
     #efficiency-results {
       display: block;
-      margin-top: 8px;
       font-size: 2rem;
-      color: #7b8b71;
+      line-height: 1em;
     }
 
     #wheel-select {
@@ -82,6 +86,18 @@
 
     #comment {
       margin-top: 0;
+    }
+
+    .cl-red {
+      color: #965455 !important;
+    }
+
+    .cl-yellow {
+      color: #a29988 !important;
+    }
+
+    .cl-green {
+      color: #7b8b71 !important;
     }
 
     @media screen and (max-width: 720px) {
@@ -104,11 +120,12 @@
   <lit-header class="">
     <lit-left>
       <lit-title>
-        动力利用率计算器<span class="version">Version: <span id="version-number">0.12</span></span>
+        动力利用率计算器<span class="version">Version: <span id="version-number">0.13</span></span>
       </lit-title>
     </lit-left>
     <lit-right class="lite-btns">
-      <a href="Mailto:sincerajn@outlook.com?&Subject=Besiege Tools 页面反馈&Body=请详细描写遇到的问题，最好附上截图"><img src="img/mail.svg" alt="发送反馈邮件" title="发送反馈邮件"></a>
+      <a href="Mailto:sincerajn@outlook.com?&Subject=Besiege Tools 页面反馈&Body=请详细描写遇到的问题，最好附上截图"><img src="img/mail.svg"
+          alt="发送反馈邮件" title="发送反馈邮件"></a>
     </lit-right>
   </lit-header>
 
@@ -133,9 +150,10 @@
                 v-model.number="actualSpeed">
             </div>
           </lit-col>
-          <lit-col>
+          <lit-col class="show-div">
             <p class="theory-speed">理论极速：<span>{{ theorySpeed.toFixed(2) }}</span>km/h</p>
-            <p>动力利用率：<span id="efficiency-results">{{ efficiencyResults.toFixed(2) }}%</span></p>
+            <p>动力利用率：</p>
+            <p id="efficiency-results" :class='efficiencyResultsColor'>{{ efficiencyResults.toFixed(2) }}%</p>
             <p id="comment">{{ commentText }}</p>
           </lit-col>
         </lit-row>
@@ -167,17 +185,25 @@
         efficiencyResults: function () {
           return 100 / this.theorySpeed * this.actualSpeed
         },
-        commentText: function () {
-          if (this.efficiencyResults < 75) {
-            return '利用率有些太低了，试试多改进一下？'
-          }
-          else if (this.efficiencyResults < 82) {
-            return '利用率仍有改进空间，尝试优化一下？'
-          }
-          else {
-            return null
+        commentLevel: function () {
+          if (this.efficiencyResults < 75) return 1
+          else if (this.efficiencyResults < 82) return 2
+          else return 3
+        },
+        efficiencyResultsColor: function () {
+          switch (this.commentLevel) {
+            case 1: return 'cl-red'
+            case 2: return 'cl-yellow'
+            default: return 'cl-green'
           }
         },
+        commentText: function () {
+          switch (this.commentLevel) {
+            case 1: return '利用率可能偏低了，试试改进一下？'
+            case 2: return '利用率仍有改进空间，尝试优化一下？'
+            default: return null
+          }
+        }
       }
     })
 
