@@ -7,7 +7,7 @@
     margin: 0 auto 8rem;
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (max-width: 425px) {
     #gitalk-container {
         width: calc(100% - 2rem);
         margin-left: 1rem;
