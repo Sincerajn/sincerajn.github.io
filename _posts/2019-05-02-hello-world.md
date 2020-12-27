@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Hello, world.
 tag: blog
 description: 向世界问好，宣告博客的第一声。

@@ -1,46 +1,21 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-23 00:47:02
- * @LastEditTime: 2020-12-27 14:55:21
+ * @LastEditTime: 2020-12-27 15:50:58
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \Sincerajn.github.io\_layouts\home.html
 -->
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="Sincerajn">
-    <meta name="generator" content="Jekyll">
-    <meta name="renderer" content="webkit">
-    <meta name="description" content="{{ page.description }}">
-    <meta name="keywords"
-        content="sincerajn {{ page.title }} {{ page.tag }} 博客 linux python html css javascript github Jekyll 教程 日志 besiege rimwrold ">
-    <title>{{ page.title }}</title>
-    <link rel="icon" href="./img/favicon.ico">
-    <link rel="stylesheet" href="https://raw.githack.com/Sincerajn/litCore/master/css/litCore.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/index.css">
-    <script src="https://raw.githack.com/Sincerajn/litCore/master/js/litCore.js"></script>
-    <script>
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?3f00adbef98c18c319d51d4997babcaa";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-</head>
+{% include head.html %}
 
 <body class="-lit">
-    {% include header.html %}
+  {% include header.html %}
 
-    <main>
-        {{ content }}
-    </main>
+  <main>
+    {{ content }}
+  </main>
 </body>
 
 </html>

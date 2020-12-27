@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Javascript 闭包学习笔记
 tag: Javascript 编程
 description: 记录并分享我学习 JavaScript 闭包的经验与心得
