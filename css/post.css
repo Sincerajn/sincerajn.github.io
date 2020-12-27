@@ -25,8 +25,14 @@ pre.highlight code {
 
 /* 关键字 */
 
-code .kd, code .k {
-    color: #d19a66;
+code .kd {
+    color: #9c3eda;
+}
+
+/* return */
+
+code .k {
+    color: #39adb5;
 }
 
 /* 普通 */
@@ -38,11 +44,15 @@ code .nx {
 /* 注释 */
 
 code .c1 {
-    color: #98c379;
+    color: #90a4ae;
 }
 
 /* 数字 */
 
 code .mi {
     color: #61afef;
+}
+
+code .o {
+    color: #39adb5;
 }
