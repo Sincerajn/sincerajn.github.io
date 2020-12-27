@@ -7,6 +7,14 @@
     margin: 0 auto 8rem;
 }
 
+@media screen and (min-width: 425px) {
+    #gitalk-container {
+        width: calc(100% - 2rem);
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
 /* 计数 */
 
 .gt-link {
@@ -81,7 +89,7 @@
     margin-left: 0!important;
 }
 
-.gt-ico-tip > span:nth-child(1) {
+.gt-ico-tip>span:nth-child(1) {
     display: none;
 }
 
@@ -134,6 +142,7 @@
 }
 
 /* 点赞与修改按钮 */
+
 .gt-comment-like svg {
     fill: #f44336 !important;
 }
