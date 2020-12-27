@@ -1,74 +1,78 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-02-23 00:47:02
+ * @LastEditTime: 2020-12-27 14:59:50
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \Sincerajn.github.io\_layouts\default.html
+-->
 <!DOCTYPE html>
 <html lang="zh-CN">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="Sincerajn">
-    <meta name="generator" content="Jekyll">
-    <meta name="renderer" content="webkit">
-    <meta name="description" content="{{ page.description }}">
-    <meta name="keywords" content="{{ page.title }} {{ page.tag }} sincerajn">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/comment.css">
-    <link rel="stylesheet" href="https://raw.githack.com/Sincerajn/litCore/master/css/litCore.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/blog.css">
-    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-    <script src="https://raw.githack.com/Sincerajn/litCore/master/js/litCore.js"></script>
-    <script>
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?3f00adbef98c18c319d51d4997babcaa";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Sincerajn">
+  <meta name="generator" content="Jekyll">
+  <meta name="renderer" content="webkit">
+  <meta name="description" content="{{ page.description }}">
+  <meta name="keywords" content="{{ page.title }} {{ page.tag }} sincerajn">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/comment.css">
+  <link rel="stylesheet" href="https://raw.githack.com/Sincerajn/litCore/master/css/litCore.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/blog.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  <script src="https://raw.githack.com/Sincerajn/litCore/master/js/litCore.js"></script>
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?3f00adbef98c18c319d51d4997babcaa";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 </head>
 
 <body class="-lit">
-    <lit-header class="-shadow -sticky">
-        <lit-left>
-            <lit-title>{{site.blogName}}</lit-title>
-        </lit-left>
-    </lit-header>
+  {% include header.html %}
 
-    <main>
-        <lit-row>
-            <lit-col class="center">
-                <lit-doc>
-                    <h1>{{ page.title }}</h1>
-                    {{ content }}
-                    <p>{{ page.date | date_to_xmlschema }}</p>
-                    <p>{{ page.url }}</p>
-                </lit-doc>
-            </lit-col>
-        </lit-row>
+  <main>
+    <lit-row>
+      <lit-col class="center">
+        <lit-doc>
+          <h1>{{ page.title }}</h1>
+          {{ content }}
+          <p>{{ page.date | date_to_xmlschema }}</p>
+          <p>{{ page.url }}</p>
+        </lit-doc>
+      </lit-col>
+    </lit-row>
 
-        <lit-row>
-            <lit-col class="center">
-                <div id="gitalk-container"></div>
-            </lit-col>
-        </lit-row>
+    <lit-row>
+      <lit-col class="center">
+        <div id="gitalk-container"></div>
+      </lit-col>
+    </lit-row>
 
 
-    </main>
+  </main>
 
-    <script>
-        var gitalk = new Gitalk({
-            clientID: '66235ca967067f7b1039',
-            clientSecret: 'c8433732d5d3886bef959ed14397388b4aa25629',
-            repo: 'Sincerajn.github.io',
-            owner: 'Sincerajn',
-            admin: ['Sincerajn'],
-            id: '{{ page.date }}',
-            distractionFreeMode: false  // Facebook-like distraction free mode
-        })
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '66235ca967067f7b1039',
+      clientSecret: 'c8433732d5d3886bef959ed14397388b4aa25629',
+      repo: 'Sincerajn.github.io',
+      owner: 'Sincerajn',
+      admin: ['Sincerajn'],
+      id: '{{ page.date }}',
+      distractionFreeMode: false  // Facebook-like distraction free mode
+    })
 
-        gitalk.render('gitalk-container')
-    </script>
+    gitalk.render('gitalk-container')
+  </script>
 </body>
 
 </html>
