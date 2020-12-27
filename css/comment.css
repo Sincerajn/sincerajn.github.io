@@ -3,7 +3,7 @@
 #gitalk-container {
     font-size: inherit;
     font-family: inherit;
-    max-width: 40em;
+    width: 40em;
     margin: 0 auto 8rem;
 }
 
