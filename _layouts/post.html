@@ -10,9 +10,12 @@
       <lit-col class="center">
         <lit-doc>
           <h1>{{ page.title }}</h1>
+          <info>
+            <img src="https://iph.href.lu/24x24?fg=666666&bg=f9cb9c">
+            <author class="lit-author">{{ site.author }}</author>
+            <span class="lit-date">{{ page.date | date_to_xmlschema }}</span>
+          </info>
           {{ content }}
-          <p>{{ page.date | date_to_xmlschema }}</p>
-          <p>{{ page.url }}</p>
         </lit-doc>
       </lit-col>
     </lit-row>
