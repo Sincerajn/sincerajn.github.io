@@ -69,6 +69,11 @@ pre.highlight code {
     line-height: 1.5em;
 }
 
+.highlight code::selection,
+.highlight span::selection {
+    background: #00968829; 
+}
+
 /* 关键字 */
 
 code .kd {
