@@ -8,23 +8,14 @@
   <meta name="description" content="{{ page.description }}">
   <meta name="keywords" content="{{ page.title }} {{ page.tag }} {{ site.moreKeyWords }}">
   <title>{{ page.title }} - {{ site.blogName }}</title>
-  <link rel="icon" href="//cdn.jsdelivr.net/gh/Sincerajn/Sincerajn.github.io@latest/img/favicon.ico">
+  <link rel="icon" href="{{ site.srcUrl }}/img/favicon.ico">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/Sincerajn/litCore@latest/css/litCore.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/Sincerajn/Sincerajn.github.io@latest/css/{{ page.layout }}.css">
+  <link rel="stylesheet" href="{{ site.srcUrl }}/css/{{ page.layout }}.css">
   {% if page.layout == 'post' %}
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/Sincerajn/Sincerajn.github.io@latest/css/comment.css">
+  <link rel="stylesheet" href="{{ site.srcUrl }}/css/comment.css">
   <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
   {% endif %}
   <script src="//cdn.jsdelivr.net/gh/Sincerajn/litCore@latest/js/litCore.js"></script>
-  <script>
-    // 百度统计
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?3f00adbef98c18c319d51d4997babcaa";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
+  {% include baidu_analytics.html %}
 </head>
