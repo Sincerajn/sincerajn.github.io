@@ -9,12 +9,14 @@ description: Sincerajn 的个人博客主页
     <ul style="padding-left: 0;">
         {% for post in site.posts %}
         <li style="list-style: none;margin-bottom: 1rem;">
-            <h2 style="color: #333333;" class="-lit-serif">
-                <a href="{{ post.url }}">{{ post.title }}</a>
-            </h2>
-            <p>
-                {{ post.description }}
-            </p>
+            <div class="card">
+                <h2 style="color: #333333;" class="-lit-serif article-title">
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </h2>
+                <p class="article-description">
+                    {{ post.description }}
+                </p>
+            </div>
         </li>
         {% endfor %}
     </ul>

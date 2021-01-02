@@ -11,6 +11,7 @@ lit-header {
 
 lit-doc {
     margin-top: 0;
+    margin-bottom: 2rem;
 }
 
 info {
@@ -36,12 +37,12 @@ info {
     margin: 0 .5em;
 }
 
-.lit-author {
+.author {
     display: inline-block;
     margin-left: .5em;
 }
 
-.lit-author:hover {
+.author:hover {
     text-decoration: underline;
 }
 
@@ -67,6 +68,16 @@ pre.highlight code {
     font-size: 14px;
     font-family: monospace;
     line-height: 1.5em;
+}
+
+.toolbar {
+    justify-content: space-between;
+}
+
+.go-more-page {
+    color: #333;
+    font-size: .8rem;
+    line-height: 1em;
 }
 
 .highlight code::selection,

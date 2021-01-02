@@ -1,6 +1,14 @@
-<lit-header >
+<lit-header>
   <lit-left>
-    <lit-title>{{ site.blogName }}</lit-title>
+    <lit-title id="site_title" style="cursor: pointer;">{{ site.blogName }}</lit-title>
     <h1 style="display: none;">{{ page.title }}</h1>
   </lit-left>
 </lit-header>
+
+<script>
+  let siteTitle = document.querySelector('#site_title')
+
+  siteTitle.addEventListener('click', () => {
+    window.location.href="https://sincerajn.github.io/"
+  })
+</script>

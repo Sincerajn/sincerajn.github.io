@@ -7,5 +7,5 @@ blogName: Sincerajn's blog
 author: Sincerajn
 moreKeyWords: sincerajn 博客 linux python html css javascript github Jekyll 教程 日志 besiege rimwrold
 
-srcUrl: //cdn.jsdelivr.net/gh/Sincerajn/Sincerajn.github.io@latest
-# srcUrl: //127.0.0.1:4000
+# srcUrl: //cdn.jsdelivr.net/gh/Sincerajn/Sincerajn.github.io@latest
+srcUrl: //127.0.0.1:4000

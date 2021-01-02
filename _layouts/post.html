@@ -9,14 +9,28 @@
     <lit-row>
       <lit-col class="center">
         <lit-doc>
-          <h1>{{ page.title }}</h1>
+          <h1 id="page_title">{{ page.title }}</h1>
           <info>
             <img class="author-img" src="{{ site.srcUrl }}/img/favicon.ico">
-            <author class="lit-author">{{ site.author }}</author>
+            <author class="author -lit-serif">{{ site.author }}</author>
             <span class="lit-sego">/</span>
-            <span class="lit-date">{{ page.date | date_to_xmlschema }}</span>
+            <span class="lit-date">{{ page.date | date: "%Y 年 %-m 月 %-d 日" }}</span>
           </info>
           {{ content }}
+          <lit-row class="toolbar">
+            <lit-col>
+              {% if page.previous.title %}
+              <span class="go-more-page">上一篇</span>
+              <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
+              {% endif %}
+            </lit-col>
+            <lit-col>
+              {% if page.next.title %}
+              <span class="go-more-page">下一篇</span>
+              <a href="{{ page.next.url }}">{{ page.next.title }}</a>
+              {% endif %}
+            </lit-col>
+          </lit-row>
         </lit-doc>
       </lit-col>
     </lit-row>
@@ -27,6 +41,7 @@
       </lit-col>
     </lit-row>
   </main>
+  <!-- {% include script_post.html %} -->
 </body>
 
 </html>
